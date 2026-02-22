@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST['username'])) {
     $_SESSION['user'] = $_POST['username'];
-    $_SESSION['user'] = $_POST['password'];
+    $_SESSION['password'] = $_POST['password'];
     $_SESSION['cart'] = [];
     header("Location: shop.php");
     exit;
@@ -11,6 +11,7 @@ if (isset($_POST['username'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,6 +131,7 @@ if (isset($_POST['username'])) {
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <div class="login-icon">🔐</div>
@@ -149,4 +151,5 @@ if (isset($_POST['username'])) {
         </div>
     </div>
 </body>
+
 </html>
